@@ -1,15 +1,24 @@
-# Kaltura Node-JS Template
-All the necessary components, and some nice-to-haves to get a node.js app running with the Kaltura  API.
+# Kaltura Caption Editor Embed
+A guide to embed the Kaltura Caption Editor in your web application. Kaltura has a rich [captioning Experience](https://knowledge.kaltura.com/help/using-subtitles-and-captions) that is available in the [KMC](https://kmc.kaltura.com/index.php/kmcng/login)
 
-# Documentation
- This project is a basic node template created using npx express-generator
- Kaltura-specific libraries are included:
+However, you also are able to embed the caption editor by itself as shown below:
 
-1. "kaltura-client" kaltura node API client in package.json
-2. lib/kalturaClientFactory.js for easy client generation
-3. an ADMIN ks is generated in routes/index.js
+![captions_embed](readme_assets/captions_embed.png)
+
+To use the demo, supply a media entry id from your account that can be acquired via:https://developer.kaltura.com/console/service/media/action/list
+
+The caption editor will only work with media entries that already have existing captions. If you wanted to create an experience where captions are able to be added for the first time, you could create a blank [CaptionAsset](https://developer.kaltura.com/console/service/captionAsset) by following this workflow:
+
+https://developer.kaltura.com/workflows/Enrich_and_Organize_Metadata/Captions
 
 # How to Run
+
+#### PHP
+
+Fill out all the variables as specified and run the example.
+
+#### Node.JS
+
 1. Install https://nodejs.org/en/
 2. Copy env.template to .env and fill in your information
 3. run npm install

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/kaltura-theme.css">
+        <link rel="stylesheet" href="stylesheets/style.css">
+        <head>
+            <style type="text/css">
+                .kccs-frame {
+                    width: 100%;
+                    margin-top: 20px;
+                    min-height: 672px;
+                    margin-left: -15px;
+                    margin-right: -15px;
+                    border-width: 2px;
+                    border-style: inset;
+                    border-color: initial;
+                    border-image: initial;
+                }
+            </style>
+        
+        </head>
+    </head>
+<body>
+	<h1>Important Notes:</h1>
+	<ul>
+		<li>The captions editor app is designed to run on desktops and tablets/ipads on landscape mode only.</li>
+		<li>The app player and API protocol is http. If we want https we need to explicitly 
+            send both cdnurl and serviceurl attributes with corresponding parameters</li>
+            <li>Your video must already have existing captions, or you must implement a flow to create an empty caption. See Documentation.</li>
+	</ul>
+    <form action="/" method="POST" >
+    EntryId: Get from <a href="https://developer.kaltura.com/console/service/media/action/list">https://developer.kaltura.com/console/service/media/action/list</a>
+    <input type="text" name="entryId">
+    <input type="submit">
+    </form>
+    <% if(locals.iFrameUrl) {%>
+	<iframe id="kalturaCaptionsEditor" class="kccs-frame" src="<%=iFrameUrl%>"></iframe>
+    <% } %>
+</body>
+
+</html>
+    </body>
+</html>
